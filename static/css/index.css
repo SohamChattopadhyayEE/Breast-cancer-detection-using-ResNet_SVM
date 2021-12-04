@@ -1,0 +1,85 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    text-align: center;
+    text-decoration: underline;
+}
+.flashes{
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    color: red;
+}
+.container{
+    text-align: center;
+}
+#container{
+    margin:10px auto;
+    text-align: center;
+}
+
+#form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#image-input{
+    display: none;
+}
+.custom-file-upload{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px dashed black;
+    padding: 5px;
+    margin:10px auto;
+}
+.fa-file-upload{
+   margin-right:5px;
+}
+.btn{
+    padding : 12px;
+    border:none;
+    outline:none;
+    box-shadow:0 0 10px rgba(128,128,128,0.6);
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    margin :10px auto;
+}
+
+@media(max-width:767px){
+    #output{
+        width:70%;
+        height:70%;
+    }
+}
+
+@media(min-width:768px) and (max-width:999px){
+    #output{
+        width:70%;
+        height:70%;
+    }
+}
+
+#output{
+    width:33%;
+    height:33%;
+    margin :10px auto;
+}
+
+#predicted_image{
+    width:33%;
+    height:33%;
+}
+
+#benign{
+    color:rgba(255, 153, 0, 0.897);
+    margin:10px auto;
+}
+
+#malignant{
+    color:rgba(255,0,0,1);
+    margin:10px auto;
+}

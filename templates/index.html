@@ -3,11 +3,12 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>MobileNet SSD Detector</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-   <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-
+   <title>Breast-cancer Detector</title>
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,33 +21,31 @@
    </ul>
    {% endif %}
    {% endwith %}
-   <nav class="navbar navbar-dark bg-dark ">
-      <a class="navbar-brand navbar-center" href="#">MobileNet SSD Demo</a>
-   </nav>
 
-   <div class="container">
-      <div class="starter-template">
-         <h2>MobileNet SSD Detector</h2>
-         <p>Upload an image and see what objects are detected</p>
-         <p> Max Image Size: 2 MB </p>
-      </div>
+   <div class="header">
+      <h1>Breast-cancer Detector</h1>
    </div>
 
-
-  
-
    <div class="container">
-      <form method=post enctype=multipart/form-data>
-         <input type=file name=file onchange="loadFile(event)">
-         <input type=submit value=Upload class="btn btn-primary">
+      <form id="form" action="/" method="POST" enctype="multipart/form-data">
+         <label for="image-input" class="custom-file-upload">
+             <i class="fas fa-file-upload fa-2x"></i>
+             <h3>Choose file for prediction</h3>
+         </label>
+         <input id="image-input" type=file onchange="showPreview(event)" name=file accept="image/jpg, image/png, image/jpeg"/>
+         <img id="output" alt="" width="33%" height="33%" />
+         <input type=submit value=Upload class="btn"/>
       </form>
-      <img id="output" alt="" width="40%" height="40%" />
    </div>
 
    {% if data %}
-   <div class="container">
-      <img src="{{ data.processed_img }}" alt="" width="480px" height="360px">
-      <img src="{{ data.processed_img }}" alt="" width="480px" height="360px">
+   <div id="container">
+      <img src="{{data.uploaded_image}}" alt="" id="predicted_image" />
+      {% if data["class"]=="Malignant" %}
+         <h1 id="malignant">{{data["class"]}}</h1>
+      {% else %}
+         <h1 id="benign">{{data["class"]}}</h1>
+      {% endif %}
    </div>
    {% endif %}
 
