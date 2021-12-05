@@ -3,6 +3,9 @@ This is a Python project for breast cancer detection.
 
 ![gif](https://github.com/SohamChattopadhyayEE/Breast-cancer-detection-using-ResNet_SVM/blob/main/videos/Benign.gif)
 
+## Dependencies
+    pip install -r requirements.txt
+
 ## Folder structure
     Root folder
         |-----> static                          # The static folder containing unchangable frontend codes
