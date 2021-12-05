@@ -1,0 +1,11 @@
+Flask
+opencv-python-headless
+numpy
+pandas
+sklearn
+torch
+gunicorn
+itsdangerous
+MarkupSafe
+Werkzeug
+Jinja2
