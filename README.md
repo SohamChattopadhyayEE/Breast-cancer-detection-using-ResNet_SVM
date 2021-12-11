@@ -4,6 +4,9 @@ This is a Python project for breast cancer detection.
 ![gif](https://github.com/SohamChattopadhyayEE/Breast-cancer-detection-using-ResNet_SVM/blob/main/videos/Benign.gif)
 
 ## Description
+- The proposed framework is a hybrid of Deep Learning and traditional Machine Learning.  
+- Following traditional `Transfer learning` technique `pre-trained ResNet18` model trained on BreakHis breast-cancer dataset is used for feature extraction. 
+- High-dimensional pre-final layer features of ResNet18 are extracted 
 - XXX ![flow diagram](https://github.com/SohamChattopadhyayEE/Breast-cancer-detection-using-ResNet_SVM/blob/main/Pictures/Slide1.JPG)
 
 ## Dependencies
