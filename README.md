@@ -2,7 +2,7 @@
 
 ![gif](https://github.com/SohamChattopadhyayEE/Breast-cancer-detection-using-ResNet_SVM/blob/main/videos/Benign.gif)
 - This is a Python project for breast cancer detection. The user has to give input of an `histopathological images` of `40x` magnification scale and the model will predict whether it is `cancerous (malignant)` or `non-cancerous (benign)`. 
-- This entire end-to-end full-stack api utilizes popular frameworkss like: 
+- This entire end-to-end full-stack api utilizes popular frameworks like: 
     - Flask
     - Jinja2
     - OpenCV
