@@ -4,9 +4,10 @@
 - This is a Python project for breast cancer detection. The user has to give input of an `histopathological images` of `40x` magnification scale and the model will predict whether it is `cancerous (malignant)` or `non-cancerous (benign)`. 
 - This entire end-to-end full-stack api utilizes popular frameworkss like: 
     - Flask
+    - Jinja2
     - OpenCV
     - Pytorch
-    - Jinja2
+    - Scikit-learn
 
 ## Description
 - The proposed framework is a hybrid of Deep Learning and traditional Machine Learning.  
